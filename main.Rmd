@@ -1,0 +1,32 @@
+---
+title: 'Coursera: Data Product - Week 2'
+author: "Deepesh Madkar"
+date: "9/23/2018"
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Location: Mumbai(India)
+```{r echo=TRUE}
+# Loading Libraries
+library(leaflet)
+
+# Passing url of map details
+mumbai <- c("<a href= 'https://en.wikipedia.org/wiki/Mumbai' >Mumbai</a>")
+mumbaiLat <- 19.07283
+mumbaiLong <- 72.88261
+
+# implementing leaflet code
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=mumbaiLat, lng=mumbaiLong, popup = mumbai)
+
+
+
+```
+
